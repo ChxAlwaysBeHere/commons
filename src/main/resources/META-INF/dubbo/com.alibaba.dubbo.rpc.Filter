@@ -1,0 +1,1 @@
+rpcResultCheck=org.chx.commons.rpc.dubbo.filter.RpcResultCheckFilter
