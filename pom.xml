@@ -64,7 +64,6 @@
             <version>1.16.18</version>
         </dependency>
 
-        <!-- temp -->
         <dependency>
             <groupId>com.squareup</groupId>
             <artifactId>javapoet</artifactId>
