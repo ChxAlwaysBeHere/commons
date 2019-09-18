@@ -36,15 +36,16 @@ public class RpcResultCheckFilter implements Filter {
             throwable = e;
         }
 
-        if (Objects.nonNull(throwable)) {
-            log.error("refer={}||params={}", refer, JsonHelper.toJson(invocation.getArguments()), throwable);
-
-            /* 抛出自定义异常 throw new SystemException(StatusCode.RPC_REQUEST_ERROR, result.getException().getMessage()); */
-            return new RpcResult(new RuntimeException(throwable));
-        } else {
+        if (Objects.isNull(throwable)) {
             log.warn("refer={}||params={}||result={}||proc_time={}", refer, JsonHelper.toJson(invocation.getArguments()), JsonHelper.toJson(result.getValue()), System.currentTimeMillis() - s);
             return result;
         }
+
+        log.error("refer={}||params={}", refer, JsonHelper.toJson(invocation.getArguments()), throwable);
+        RpcExceptions exceptions = RpcExceptions.findMatch(throwable);
+        String message = (Objects.isNull(exceptions) ? throwable.getMessage() : exceptions.getMessage(throwable));
+        /* 抛出自定义异常 throw new SystemException(StatusCode.RPC_REQUEST_ERROR, result.getException().getMessage()); */
+        return new RpcResult(new RuntimeException(message, throwable));
     }
 
 }
