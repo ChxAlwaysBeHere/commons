@@ -1,0 +1,1 @@
+interceptor=org.chx.commons.rpc.dubbo.protocol.ProtocolInterceptorWrapper
