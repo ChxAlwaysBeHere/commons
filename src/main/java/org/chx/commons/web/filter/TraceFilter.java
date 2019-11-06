@@ -47,7 +47,6 @@ public class TraceFilter extends OncePerRequestFilter {
         } finally {
             String requestContent;
             if (HttpMethod.POST.matches(requestWrapper.getMethod())) {
-
                 requestContent = IOUtils.toString(requestWrapper.getContentAsByteArray(), "utf-8");
             } else {
                 requestContent = JsonHelper.toJson(requestWrapper.getParameterMap());

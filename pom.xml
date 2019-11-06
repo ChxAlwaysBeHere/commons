@@ -12,6 +12,14 @@
         <spring.version>4.3.25.RELEASE</spring.version>
         <spring.boot.version>1.5.22.RELEASE</spring.boot.version>
         <dubbo.starter.version>0.1.2.RELEASE</dubbo.starter.version>
+
+        <mybatis.version>3.5.2</mybatis.version>
+        <jsqlparser.version>3.0</jsqlparser.version>
+
+        <guava.version>28.1-jre</guava.version>
+        <apache.commons-lang.version>3.9</apache.commons-lang.version>
+        <apache.commons-io.version>2.6</apache.commons-io.version>
+        <apache.commons-collection.version>4.4</apache.commons-collection.version>
     </properties>
 
     <dependencies>
@@ -55,6 +63,40 @@
             <version>2.6</version>
             <optional>true</optional>
         </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-collections4</artifactId>
+            <version>${apache.commons-collection.version}</version>
+        </dependency>
+
+        <!-- orm -->
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>${mybatis.version}</version>
+        </dependency>
+        <!-- sql -->
+        <dependency>
+            <groupId>com.github.jsqlparser</groupId>
+            <artifactId>jsqlparser</artifactId>
+            <version>${jsqlparser.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${guava.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${apache.commons-lang.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>${apache.commons-io.version}</version>
+        </dependency>
 
         <!-- log -->
         <dependency>
@@ -90,6 +132,7 @@
                     <target>1.8</target>
                     <encoding>UTF-8</encoding>
                     <!-- 当前项目忽略annotation processing处理 -->
+                    <!-- javac 在编译时，会用 javax.annotation.processing.Processor 里指定的类去处理源代码，因此 javac 预期在 classpath 里能找到一个编译好的 processor -->
                     <compilerArgument>-proc:none</compilerArgument>
                 </configuration>
             </plugin>
