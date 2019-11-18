@@ -21,6 +21,7 @@
         <apache.commons-io.version>2.6</apache.commons-io.version>
         <apache.commons-collection.version>4.4</apache.commons-collection.version>
         <hibernate.version>5.4.1.Final</hibernate.version>
+        <jackson.version>2.10.1</jackson.version>
     </properties>
 
     <dependencies>
@@ -61,7 +62,7 @@
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
-            <version>[2.9.10.1,)</version>
+            <version>${jackson.version}</version>
             <optional>true</optional>
         </dependency>
         <dependency>
@@ -123,7 +124,6 @@
             <groupId>com.squareup</groupId>
             <artifactId>javapoet</artifactId>
             <version>1.11.1</version>
-            <optional>true</optional>
         </dependency>
 
     </dependencies>
