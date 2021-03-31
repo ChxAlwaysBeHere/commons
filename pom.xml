@@ -14,7 +14,7 @@
         <dubbo.starter.version>0.1.2.RELEASE</dubbo.starter.version>
 
         <mybatis.version>3.5.2</mybatis.version>
-        <guava.version>28.1-jre</guava.version>
+        <guava.version>29.0-jre</guava.version>
         <apache.commons-lang.version>3.9</apache.commons-lang.version>
         <apache.commons-io.version>2.6</apache.commons-io.version>
         <apache.commons-collection.version>4.4</apache.commons-collection.version>
