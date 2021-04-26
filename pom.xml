@@ -16,7 +16,7 @@
         <mybatis.version>3.5.2</mybatis.version>
         <guava.version>28.1-jre</guava.version>
         <apache.commons-lang.version>3.9</apache.commons-lang.version>
-        <apache.commons-io.version>2.6</apache.commons-io.version>
+        <apache.commons-io.version>2.7</apache.commons-io.version>
         <apache.commons-collection.version>4.4</apache.commons-collection.version>
         <hibernate.version>5.4.1.Final</hibernate.version>
         <jackson.version>2.10.1</jackson.version>
@@ -73,7 +73,7 @@
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
-            <version>2.6</version>
+            <version>2.7</version>
             <optional>true</optional>
         </dependency>
         <dependency>
